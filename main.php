@@ -28,13 +28,13 @@ use Reweb\Job\Backend;
 	    $conta = new Backend\Conta($nome,$tipo);
 		
 		//informa os dados cadastrados
-		echo "Dados cadastrados:\n\n - Nome: ".$conta->nome." - Tipo da conta: ".$conta->getTipo()."\n - Limite p/ Saqeu: B$ ".$dinheiro->formatar($conta->limite)."\n - Saldo Atual: B$ ".$dinheiro->formatar($conta->saldo)."\n\n\n";
+		echo "Dados cadastrados:\n\n - Nome: ".$conta->nome." - Tipo da conta: ".$conta->getTipo()."\n - Limite p/ Saque: B$ ".$dinheiro->formatar($conta->limite)."\n - Saldo Atual: B$ ".$dinheiro->formatar($conta->saldo)."\n\n\n";
 		
 		$operando = 0;
 		//oferece opção de operações enquanto operando for igual a zero
 		while ($operando == 0) {
 		echo "Escolha a operação desejada:\n";
-		echo " Saque - Digite 1\n Deposito - Digite 2\n Tranferências - Digite 3\n Digite outro valor para finalizar\n";
+		echo " Saque - Digite 1\n Depósito - Digite 2\n Tranferências - Digite 3\n Digite outro valor para finalizar\n";
 		$operacao = fgets(STDIN);
 		//verifica a operação escolhida
 		switch (intval($operacao)) {
